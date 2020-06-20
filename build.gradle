@@ -1,0 +1,65 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.41'
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://dl.bintray.com/drummer-aidan/maven/" }
+        maven { url 'https://maven.fabric.io/public' }
+        maven {
+            url "https://jitpack.io"
+        }
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.0.1'
+        classpath 'io.fabric.tools:gradle:1.25.4'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://dl.bintray.com/drummer-aidan/maven/" }
+        maven {
+            url 'https://maven.google.com/'
+        }
+        maven {
+            url "https://jitpack.io"
+        }
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+ext {
+    expandableRecyclerViewVersion = "1.4"
+    supportLibraryVersion = "28.0.0"
+    projectLombokVersion = "1.16.18"
+    archLifecycleVersion = "1.1.0"
+    archRoomVersion = "1.1.0"
+    daggerVersion = "2.11"
+    gsonVersion = "2.8.2"
+    glideVersion = "4.4.0"
+    circularImageViewVersion = "2.2.0"
+    signaturePadVersion = "1.2.1"
+
+    gsonConverterVersion = "2.3.0"
+    timberVersion = "4.5.1"
+    retrofitVersion = "2.3.0"
+    rxAndroidVersion = "2.0.1"
+    rxVersion = "2.1.6"
+    loggingInterceptorVersion = "3.10.0"
+    cardStackVersion = "1.0.0-beta8"
+    calenderViewVersion = "2.0.2.2"
+    lottieVersion = "2.6.1"
+    crashlyticsVersion = "2.9.5"
+}
